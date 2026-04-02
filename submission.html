@@ -16,19 +16,114 @@
 			height: 500px;
 		}
 
-		/* YOUR CSS CODE WILL GO HERE */
+		text {
+			font-family: Arial, sans-serif;
+			}
 
+			.axis {
+			stroke: black;
+			stroke-width: 2;
+			}
+
+			.line1 {
+			fill: #1f77b4;
+			}
+
+			.line2 {
+			fill: #2ca02c;
+			}
+
+			.line3 {
+			fill: #ff7f0e;
+			}
+
+			.label {
+			font-size: 12px;
+			}
+
+			.title {
+			font-size: 18px;
+			font-weight: bold;
+			}
+
+			.axis-label {
+			font-size: 14px;
+			font-weight: bold;
+			}
+
+			.legend {
+				fill: black;
+				font-size: 12px;
+			}
 
 	</style>
 </head>
 
 <body>
 	<h1 id="header-title">
-		In-Class Acitivity by REPLACE_WITH_YOUR_NAME
+		In-Class Acitivity by Hannah Safiah Binti Saharani
 	</h1>
 
 	<svg id="visualization-activity">
-		<!-- YOUR SVG CODE WILL GO HERE -->
+		<!--chart title-->
+		<text x="350" y="30" text-anchor="middle" class="title">
+			Top 6 Busiest Stations on Dec 1, 2024
+		</text>
+
+		<!--axes-->
+		<line x1="80" y1="400" x2="650" y2="400" class="axis" />
+		<line x1="80" y1="50" x2="80" y2="400" class="axis" />
+
+		<!-- Y-axis labels -->
+		<text x="70" y="400" text-anchor="end" class="label">0</text>
+		<text x="70" y="356" text-anchor="end" class="label">10,000</text>
+		<text x="70" y="312" text-anchor="end" class="label">20,000</text>
+		<text x="70" y="268" text-anchor="end" class="label">30,000</text>
+		<text x="70" y="224" text-anchor="end" class="label">40,000</text>
+		<text x="70" y="180" text-anchor="end" class="label">50,000</text>
+		<text x="70" y="136" text-anchor="end" class="label">60,000</text>
+		<text x="70" y="92" text-anchor="end" class="label">70,000</text>
+		<text x="70" y="48" text-anchor="end" class="label">80,000</text>
+
+		<!-- Bars -->
+		<!-- Hongdae: 72,874 -->
+		<rect x="100" y="79" width="60" height="321" class="line2" />
+		<!-- Jamsil: 63,085 -->
+		<rect x="180" y="122" width="60" height="278" class="line2" />
+		<!-- Express Bus Terminal: 53,566 -->
+		<rect x="260" y="164" width="60" height="236" class="line3" />
+		<!-- Seoul Station: 40,617 -->
+		<rect x="340" y="221" width="60" height="179" class="line1" />
+		<!-- Sillim: 38,271 -->
+		<rect x="420" y="232" width="60" height="168" class="line2" />
+		<!-- Sindorim: 37,521 -->
+		<rect x="500" y="235" width="60" height="165" class="line2" />
+
+		<!-- X-axis labels -->
+		<text x="130" y="420" text-anchor="middle" class="label">Hongdae</text>
+		<text x="210" y="420" text-anchor="middle" class="label">Jamsil</text>
+		<text x="290" y="420" text-anchor="middle" class="label">Express Bus</text>
+		<text x="290" y="435" text-anchor="middle" class="label">Terminal</text>
+		<text x="370" y="420" text-anchor="middle" class="label">Seoul Station</text>
+		<text x="450" y="420" text-anchor="middle" class="label">Sillim</text>
+		<text x="530" y="420" text-anchor="middle" class="label">Sindorim</text>
+
+		<!-- Axis labels -->
+		<text x="350" y="470" text-anchor="middle" class="axis-label">Station Name</text>
+
+		<text x="25" y="230" text-anchor="middle" transform="rotate(-90 25 230)" class="axis-label">
+		Entry Count
+		</text>
+
+		<!-- Legend -->
+		<rect x="500" y="80" width="15" height="15" class="line1" fill="#1f77b4" />
+		<text x="520" y="92" class="legend-text">Line 1</text>
+
+		<rect x="500" y="110" width="15" height="15" class="line2" fill="2ca02c" />
+		<text x="520" y="122" class="legend-text">Line 2</text>
+
+		<rect x="500" y="140" width="15" height="15" class="line3" fill="#ff7f0e"/>
+		<text x="520" y="152" class="legend-text">Line 3</text>
 
 
 	</svg>
